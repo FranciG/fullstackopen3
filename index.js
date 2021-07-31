@@ -42,7 +42,11 @@ app.get('/api/persons', (request, response) => {
   response.json(persons)
 })
 
+//info
 
+app.get('/info', (req, res) => {
+    res.json(`The phonebook has info for ${persons.length} people. Request time: ${Date().toLocaleString()}`)
+  })
 
 const PORT = 3001
 app.listen(PORT, () => {
